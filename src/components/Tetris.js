@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { checkCollison, createStage } from "../gameHelpers";
+import { checkCollison, createStage, nextStage } from "../gameHelpers";
 //Custom Hooks
 import { useInterval } from "../hooks/useInterval";
 import { usePlayer} from "../hooks/usePlayer";
@@ -12,6 +12,7 @@ import { StyledTetris } from "../styles/StyledTetris";
 import Stage from "./Stage";
 import Display from "./Display";
 import StartButton from "./StartButton";
+import NextPiece from "./NextPiece";
 
 const Tetris=()=>
 {
@@ -34,7 +35,6 @@ const Tetris=()=>
         setScore(0);
         setRows(0);
         setLevel(0);
-
     }
 
     const keyUp = ({keyCode}) => {
@@ -91,6 +91,7 @@ const Tetris=()=>
             <StyledTetris>
             <Stage stage={stage}/>
             <aside>
+                <NextPiece nextpiece={NextPiece} />
                 {gameOver ?(
                     <Display gameOver={gameOver} text="Game Over" />
                     ):(
