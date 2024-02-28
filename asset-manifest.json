@@ -6,6 +6,7 @@
     "main.02794d2c.js.map": "/static/js/main.02794d2c.js.map"
   },
   "entrypoints": [
-    "static/js/main.02794d2c.js"
+    "static/js/main.02794d2c.js", 
+    "/static/media/bg.d63cfd51f1a63591fdd7.png"
   ]
 }
